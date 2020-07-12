@@ -34,7 +34,7 @@ public class BaseCrawler {
         return reader;
     }
 
-    protected XMLEventReader parseStringToXMLEventReader(String xmlSection) throws UnsupportedEncodingException, XMLStreamException {
+    protected static XMLEventReader parseStringToXMLEventReader(String xmlSection) throws UnsupportedEncodingException, XMLStreamException {
         byte[] byteArray = xmlSection.getBytes("UTF-8");
         ByteArrayInputStream inputStream = new ByteArrayInputStream(byteArray);
         XMLInputFactory inputFactory = XMLInputFactory.newInstance();

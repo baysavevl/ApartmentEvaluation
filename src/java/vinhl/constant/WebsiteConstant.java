@@ -18,5 +18,12 @@ public class WebsiteConstant {
 
         public static final String error = "Có lỗi xảy ra";
         public static final String paging = "?p=";
+
+        public static final String classPrice = "fa fa-dollar-sign text-center";
+        public static final String classAddress = "fa fa-map-marker text-center";
+        public static final String classArea = "fa fa-home pr-1";
+        public static final String classRoom = "fa fa-bed pr-1";
+        public static final String classRest = "fa fa-male pr-1";
+
     }
 }

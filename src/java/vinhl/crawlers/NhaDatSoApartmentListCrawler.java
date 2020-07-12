@@ -1,8 +1,7 @@
-package vinhl.test;
+package vinhl.crawlers;
 
 import vinhl.constant.Constants;
 import vinhl.constant.WebsiteConstant;
-import vinhl.crawlers.BaseCrawler;
 import vinhl.utils.XMLChecker;
 
 import javax.xml.namespace.QName;
@@ -15,14 +14,12 @@ import javax.xml.stream.events.XMLEvent;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.Map;
-import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class NDS_C_T3 extends BaseCrawler{
+public class NhaDatSoApartmentListCrawler extends BaseCrawler{
 
-    public static String getListApartment(String url) {
+    public String getListApartment(String url) {
         BufferedReader reader = null;
         XMLChecker XMLChecker = new XMLChecker();
 
@@ -142,11 +139,5 @@ public class NDS_C_T3 extends BaseCrawler{
                 }
             }
         }
-    }
-
-    public static void main(String[] args) {
-        String url = "https://nhadatso.com/nha-dat-ban-can-ho-chung-cu-tai-quan-9-ho-chi-minh/?p=3";
-        String res = NDS_C_T3.getListApartment(url);
-        System.out.println(res);
     }
 }

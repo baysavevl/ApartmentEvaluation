@@ -10,4 +10,6 @@ public class Constants {
             "Quận 4", "Quận 5", "Quận 6", "Quận 7", "Quận 8", "Quận 9",
             "Quận Bình Thạnh", "Quận Bình Tân", "Quận Gò Vấp", "Quận Phú Nhuận",
             "Quận Thủ Đức", "Quận Tân Bình", "Quận Tân Phú"};
+
+    public static int ID_APARTMENT;
 }

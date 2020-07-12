@@ -2,6 +2,7 @@ package vinhl.crawlers;
 
 import vinhl.constant.Constants;
 import vinhl.constant.WebsiteConstant;
+import vinhl.utils.NumberHelper;
 import vinhl.utils.XMLChecker;
 
 import javax.servlet.ServletContext;
@@ -60,6 +61,7 @@ public class NhaDatSoPageCrawler extends BaseCrawler {
             if (isFound) {
                 String[] list = document.split("</ul>");
                 document = XMLChecker.refineHtml(list[0]);
+                //System.out.println(document);
                 lastPage = getLastPage(XMLChecker.refineHtml(document));
             } else
                 lastPage = 0;
@@ -98,20 +100,7 @@ public class NhaDatSoPageCrawler extends BaseCrawler {
                 }
             }//End if start element
         }//End while
-        if (link != null && !link.isEmpty()) {
-            String regex = "[0-9]+$";
-            Pattern pattern = Pattern.compile(regex);
-            Matcher matcher = pattern.matcher(link);
-            if (matcher.find()) {
-                String result = matcher.group();
-                try {
-                    int number = Integer.parseInt(result);
-                    return number;
-                } catch (NumberFormatException e) {
-                    e.printStackTrace();
-                }
-            }
-        }
-        return 1;
+
+        return NumberHelper.getNumberInString(link, 1);
     }
 }
