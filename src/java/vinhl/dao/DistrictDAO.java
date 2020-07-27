@@ -59,7 +59,7 @@ public class DistrictDAO implements Serializable {
             if (conn != null) {
                 String sql = "SELECT idDistrict from District where districtName like ?";
                 preStm = conn.prepareStatement(sql);
-                preStm.setString(1, "%" + name + "%");
+                preStm.setString(1, name);
                 rs = preStm.executeQuery();
                 while (rs.next()) {
                     result = rs.getInt("idDistrict");

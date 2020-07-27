@@ -242,9 +242,7 @@ public class NhaDatSoApartmentListCrawler extends BaseCrawler implements Runnabl
             threadResult = stAXParserForListApartment(XMLChecker.refineHtml(document));
             NhaDatSoApartmentDetailCrawler crawler = new NhaDatSoApartmentDetailCrawler();
             for (Map.Entry<String, String> entry : threadResult.entrySet()) {
-                if (!ApartmentDAO.isExisted(entry.getKey())) {
                     crawler.getApartmentDetail(entry.getKey(), entry.getValue(), districtId);
-                }
             }
 
         } catch (UnsupportedEncodingException ex) {
@@ -252,6 +250,8 @@ public class NhaDatSoApartmentListCrawler extends BaseCrawler implements Runnabl
         } catch (IOException ex) {
             Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
         } catch (XMLStreamException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             try {

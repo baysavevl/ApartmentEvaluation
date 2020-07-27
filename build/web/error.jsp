@@ -1,7 +1,7 @@
 <%-- 
     Document   : error
     Created on : Jul 11, 2020, 4:09:20 PM
-    Author     : nguye
+    Author     : Vinh
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

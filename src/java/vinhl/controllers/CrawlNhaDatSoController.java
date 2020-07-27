@@ -43,9 +43,9 @@ public class CrawlNhaDatSoController extends HttpServlet {
             NhaDatSoThread thread = new NhaDatSoThread();
             thread.start();
         } catch (Exception e) {
-            log("ERROR at CrawlTPController:" + e.getMessage());
+            log("ERROR at CrawlNDSController:" + e.getMessage());
         } finally {
-            request.getRequestDispatcher("admin_product.jsp").forward(request, response);
+            request.getRequestDispatcher("admin.jsp").forward(request, response);
         }
     }
 

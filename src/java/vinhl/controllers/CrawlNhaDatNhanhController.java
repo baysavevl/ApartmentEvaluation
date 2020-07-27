@@ -39,7 +39,7 @@ public class CrawlNhaDatNhanhController extends HttpServlet {
         } catch (Exception e) {
             log("ERROR at CrawlNhaDatNhanhController:" + e.getMessage());
         } finally {
-            request.getRequestDispatcher("admin_product.jsp").forward(request, response);
+            request.getRequestDispatcher("admin.jsp").forward(request, response);
         }
     }
 

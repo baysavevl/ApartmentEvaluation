@@ -31,7 +31,7 @@ public class ApartmentDAO implements Serializable {
     }
 
     public static void saveApartment(Apartment entity) {
-        String sql = "insert into Apartment (idApartment, nameApartment, imgUrl, webUrl, price, meanPrice, districtId, room, restRoom, address, area) values (?,?,?,?,?,?,?,?,?,?,?);";
+        String sql = "insert into Apartment (idApartment, nameApartment, imgUrl, webUrl, price, meanPrice, districtId, room, restRoom, address, area, longitude, latitude) values (?,?,?,?,?,?,?,?,?,?,?,?,?);";
         try (Connection conn = MyConnection.getMyConnection();
              PreparedStatement preStm = conn.prepareStatement(sql);) {
             preStm.setInt(1, entity.getId());
@@ -45,6 +45,9 @@ public class ApartmentDAO implements Serializable {
             preStm.setInt(9, entity.getRestRoom());
             preStm.setString(10, entity.getAddress());
             preStm.setInt(11, entity.getArea());
+            preStm.setDouble(12, entity.getLongitude());
+            preStm.setDouble(13, entity.getLatitude());
+
             preStm.executeUpdate();
         } catch (SQLException | ClassNotFoundException throwables) {
             throwables.printStackTrace();

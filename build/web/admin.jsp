@@ -14,7 +14,11 @@
     <body>
         
         <form action="MainController" method="POST">
-        <input type="submit" value="Manage Product" name="action" />
+            <input type="submit" value="Crawl Nha Dat So" name="action" />
+            </br>
+            <input type="submit" value="Crawl Nha Dat Nhanh" name="action" />
+            </br>
+            <input type="submit" value="View Report" name="action" />
         </form>
     </body>
 </html>

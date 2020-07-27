@@ -186,9 +186,7 @@ public class NhaDatNhanhApartmentListCrawler extends BaseCrawler implements Runn
             NhaDatNhanhApartmentDetailCrawler crawler = new NhaDatNhanhApartmentDetailCrawler();
             int id = getDistrictId();
             for (String item : threadResult) {
-                if (!ApartmentDAO.isExisted(item)) {
                     crawler.getApartmentDetail(item, id);
-                }
                 try {
                     synchronized (BaseThread.getInstance()) {
                         while (BaseThread.isSuspended()) {
@@ -204,6 +202,8 @@ public class NhaDatNhanhApartmentListCrawler extends BaseCrawler implements Runn
         } catch (IOException ex) {
             Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
         } catch (XMLStreamException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         } finally {
             try {

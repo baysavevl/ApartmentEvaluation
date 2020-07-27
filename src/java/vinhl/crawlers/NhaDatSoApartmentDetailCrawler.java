@@ -3,7 +3,10 @@ package vinhl.crawlers;
 import com.mysql.cj.util.StringUtils;
 import vinhl.constant.Constants;
 import vinhl.constant.WebsiteConstant;
+import vinhl.dao.ApartmentDAO;
+import vinhl.jaxb.Apartment;
 import vinhl.thread.BaseThread;
+import vinhl.utils.GeoCoding;
 import vinhl.utils.NumberHelper;
 import vinhl.utils.XMLChecker;
 
@@ -52,7 +55,8 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
         this.idDistrict = idDistrict;
     }
 
-    public void getApartmentDetail(String websiteUrl, String imgUrl, int idDistrict) {
+
+    public void getApartmentDetail(String websiteUrl, String imgUrl, int idDistrict) throws Exception {
         String url = websiteUrl;
         BufferedReader reader = null;
         XMLChecker XMLChecker = new XMLChecker();
@@ -144,7 +148,7 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
         }
     }
 
-    public void stAXParserForApartmentDetail(String document, String websiteUrl, String imgUrl, int idDistrict) throws XMLStreamException, UnsupportedEncodingException {
+    public void stAXParserForApartmentDetail(String document, String websiteUrl, String imgUrl, int idDistrict) throws Exception {
         document = document.trim();
         XMLEventReader eventReader = parseStringToXMLEventReader(document);
 
@@ -165,6 +169,10 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
         String className = "";
         String tagName = "";
         Attribute attribute;
+
+        Double[] location;
+        double longitude;
+        double latitude;
 
 
         while (eventReader.hasNext()) {
@@ -222,8 +230,7 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
                             }
                         }
                     }
-                } else
-                if ("span".equals(tagName)) {
+                } else if ("span".equals(tagName)) {
                     attribute = startElement.getAttributeByName(new QName("class"));
                     className = attribute.getValue();
                     if (className.equalsIgnoreCase(WebsiteConstant.NhaDatSo.classArea)) {
@@ -271,8 +278,34 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
             return;
         }
 
+        if (area < 0) return;
+
         meanPrice = price / area;
         strAddress = strAddress.trim().replaceAll(WebsiteConstant.NhaDatSo.removeDiaChi, "");
+
+        meanPrice = price / area;
+        location = GeoCoding.getLocation(strAddress);
+        latitude = location[0];
+        longitude = location[1];
+
+
+        Apartment apartment = new Apartment();
+        apartment.setName(apartmentName);
+        apartment.setImgUrl(imgUrl);
+        apartment.setWebUrl(websiteUrl);
+        apartment.setAddress(strAddress);
+        apartment.setArea(area);
+        apartment.setPrice(price);
+        apartment.setMeanPrice(meanPrice);
+        apartment.setRoom(room);
+        apartment.setRestRoom(resRoom);
+        apartment.setDistrictId(idDistrict);
+        apartment.setLatitude(latitude);
+        apartment.setLongitude(longitude);
+
+        ApartmentDAO.saveApartment(apartment);
+
+
         System.out.println("apartmentName = " + apartmentName);
         System.out.println("Link = " + websiteUrl);
         System.out.println("Price = " + price);
@@ -284,6 +317,8 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
         System.out.println("Rest = " + resRoom);
         System.out.println("Mean = " + meanPrice);
         System.out.println(++Constants.ID_APARTMENT);
+        System.out.println("Lat = " + latitude);
+        System.out.println("Long = " + longitude);
         System.out.println("--------------");
 
         try {

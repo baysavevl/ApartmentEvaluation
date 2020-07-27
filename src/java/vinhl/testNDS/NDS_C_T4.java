@@ -19,6 +19,6 @@ public class NDS_C_T4 extends BaseCrawler {
 
         String testUrl = "https://nhadatso.com/0773340340/du-an-can-ho-gay-du-luan-bao-chi-doi-dien-ben-xe-mien-dong-moi-x31e5s";
         NhaDatSoApartmentDetailCrawler crawler = new NhaDatSoApartmentDetailCrawler();
-        crawler.getApartmentDetail(url2, "", 4);
+        //crawler.getApartmentDetail(url2, "", 4);
     }
 }

@@ -20,15 +20,16 @@ public class MainController extends HttpServlet {
 
     private static final String ERROR = "error.jsp";
     private static final String LOGIN = "LoginController";
-    private static final String INSERT = "InsertController";
-    private static final String EDIT = "EditController";
-    private static final String UPDATE = "UpdateController";
-    private static final String DELETE = "DeleteController";
     private static final String SEARCH = "SearchController";
     private static final String MANAGE_PRODUCT = "admin_product.jsp";
-    private static final String CRAWL_DMGR = "CrawlDMGRController";
-    private static final String CRAWL_TP = "CrawlTPController";
-    private static final String SMART_ADVICE = "advice.jsp";
+    private static final String CRAWL_NDN = "CrawlNhaDatNhanhController";
+    private static final String CRAWL_NDS = "CrawlNhaDatSoController";
+    private static final String SMART_RECOMMEND = "advice.jsp";
+    private static final String MAIN_USER = "";
+    private static final String MAIN_ADMIN = "";
+    private static final String REPORT = "advice.jsp";
+    private static final String LOCATION_SUGGEST = "advice.jsp";
+
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -49,23 +50,25 @@ public class MainController extends HttpServlet {
             if (action.equals("Login")) {
                 url = LOGIN;
             } else if (action.equals("Insert")) {
-                url = INSERT;
+                //url = INSERT;
             } else if (action.equals("Update")) {
-                url = UPDATE;
+                //url = UPDATE;
             } else if (action.equals("Click To Suggest")) {
                 url = SEARCH;
             } else if (action.equals("Manage User")) {
                 url = SEARCH;
             } else if (action.equals("Manage Product")) {
                 url = MANAGE_PRODUCT;
-
-            } else if (action.equals("Crawl DMGR Page")) {
-                url = CRAWL_DMGR;
-            } else if (action.equals("Crawl Thien Phu Page")) {
-                url = CRAWL_TP;
-            } else if (action.equals("Smart Advice")) {
-                url = SMART_ADVICE;
-            } else {
+            } else if (action.equals("Crawl Nha Dat Nhanh")) {
+                url = CRAWL_NDN;
+            } else if (action.equals("Crawl Nha Dat So")) {
+                url = CRAWL_NDS;
+            } else if (action.equals("Smart Recommend")) {
+                url = SMART_RECOMMEND;
+            } else if (action.equals("View Report")) {
+                url = REPORT;
+            }
+            else {
                 request.setAttribute("ERROR", "Action is not support");
             }
         } catch (Exception e) {

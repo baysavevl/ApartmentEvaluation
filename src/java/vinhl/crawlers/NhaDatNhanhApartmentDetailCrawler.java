@@ -6,6 +6,7 @@ import vinhl.constant.WebsiteConstant;
 import vinhl.dao.ApartmentDAO;
 import vinhl.jaxb.Apartment;
 import vinhl.thread.BaseThread;
+import vinhl.utils.GeoCoding;
 import vinhl.utils.NumberHelper;
 import vinhl.utils.XMLChecker;
 
@@ -48,7 +49,7 @@ public class NhaDatNhanhApartmentDetailCrawler extends BaseCrawler {
     }
 
 
-    public void getApartmentDetail(String url, int idDistrict) {
+    public void getApartmentDetail(String url, int idDistrict) throws Exception {
         BufferedReader reader = null;
         XMLChecker XMLChecker = new XMLChecker();
         try {
@@ -173,7 +174,7 @@ public class NhaDatNhanhApartmentDetailCrawler extends BaseCrawler {
         //return null;
     }
 
-    public void stAXParserForApartmentDetail(String document, String url, int idDistrict) throws UnsupportedEncodingException, XMLStreamException, ClassCastException, SQLException {
+    public void stAXParserForApartmentDetail(String document, String url, int idDistrict) throws Exception {
         document = document.trim();
         if (document.isEmpty()) {
             return;
@@ -189,6 +190,9 @@ public class NhaDatNhanhApartmentDetailCrawler extends BaseCrawler {
         int room = -1;
         int resRoom = -1;
         double meanPrice = 0;
+        Double[] location;
+        double longitude;
+        double latitude;
 
         String moneyPrefix = "";
         String moneySuffix = "";
@@ -309,9 +313,12 @@ public class NhaDatNhanhApartmentDetailCrawler extends BaseCrawler {
         }
 
         meanPrice = price / area;
+        location = GeoCoding.getLocation(strAddress);
+        latitude = location[0];
+        longitude = location[1];
 
         Apartment apartment = new Apartment();
-        apartment.setId(++Constants.ID_APARTMENT);
+        //apartment.setId(++Constants.ID_APARTMENT);
         apartment.setName(apartmentName);
         apartment.setImgUrl(imgUrl);
         apartment.setWebUrl(url);
@@ -322,6 +329,8 @@ public class NhaDatNhanhApartmentDetailCrawler extends BaseCrawler {
         apartment.setRoom(room);
         apartment.setRestRoom(resRoom);
         apartment.setDistrictId(idDistrict);
+        apartment.setLatitude(latitude);
+        apartment.setLongitude(longitude);
 
         ApartmentDAO.saveApartment(apartment);
 
@@ -336,6 +345,9 @@ public class NhaDatNhanhApartmentDetailCrawler extends BaseCrawler {
         System.out.println("room = " + room);
         System.out.println("rest = " + resRoom);
         System.out.println("Mean = " + meanPrice);
+        System.out.println("Lat = " + latitude);
+        System.out.println("Long = " + longitude);
+
         System.out.println(Constants.ID_APARTMENT);
         System.out.println("--------------");
 
