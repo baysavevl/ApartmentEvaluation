@@ -120,7 +120,6 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
                 }
 
             }
-            //System.out.println(XMLChecker.refineHtml(document));
             try {
                 synchronized (BaseThread.getInstance()) {
                     while (BaseThread.isSuspended()) {
@@ -280,10 +279,10 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
 
         if (area < 0) return;
 
-        meanPrice = price / area;
         strAddress = strAddress.trim().replaceAll(WebsiteConstant.NhaDatSo.removeDiaChi, "");
 
         meanPrice = price / area;
+        price = (price / Constants.DIV_MILLION);
         location = GeoCoding.getLocation(strAddress);
         latitude = location[0];
         longitude = location[1];
@@ -306,20 +305,20 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
         ApartmentDAO.saveApartment(apartment);
 
 
-        System.out.println("apartmentName = " + apartmentName);
-        System.out.println("Link = " + websiteUrl);
-        System.out.println("Price = " + price);
-        System.out.println("Area = " + area);
-        System.out.println("Address = " + strAddress);
-        System.out.println("districtId = " + idDistrict);
-        System.out.println("Image = " + imgUrl);
-        System.out.println("Room = " + room);
-        System.out.println("Rest = " + resRoom);
-        System.out.println("Mean = " + meanPrice);
-        System.out.println(++Constants.ID_APARTMENT);
-        System.out.println("Lat = " + latitude);
-        System.out.println("Long = " + longitude);
-        System.out.println("--------------");
+//        System.out.println("apartmentName = " + apartmentName);
+//        System.out.println("Link = " + websiteUrl);
+//        System.out.println("Price = " + price);
+//        System.out.println("Area = " + area);
+//        System.out.println("Address = " + strAddress);
+//        System.out.println("districtId = " + idDistrict);
+//        System.out.println("Image = " + imgUrl);
+//        System.out.println("Room = " + room);
+//        System.out.println("Rest = " + resRoom);
+//        System.out.println("Mean = " + meanPrice);
+//        System.out.println(++Constants.ID_APARTMENT);
+//        System.out.println("Lat = " + latitude);
+//        System.out.println("Long = " + longitude);
+//        System.out.println("--------------");
 
         try {
             synchronized (BaseThread.getInstance()) {

@@ -21,7 +21,7 @@ import java.io.IOException;
 public class LoginController extends HttpServlet {
     private static final String ERROR = "error.jsp";
     private static final String ADMIN = "admin.jsp";
-    private static final String USER = "ViewProduct";
+    private static final String USER = "user.jsp";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>

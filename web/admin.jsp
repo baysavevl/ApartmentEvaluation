@@ -1,9 +1,3 @@
-<%-- 
-    Document   : admin
-    Created on : Jul 11, 2020, 4:05:39 PM
-    Author     : nguye
---%>
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

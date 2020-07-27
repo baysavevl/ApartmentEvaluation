@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ApartmentDAO implements Serializable {
     private static Connection conn;
@@ -26,7 +28,7 @@ public class ApartmentDAO implements Serializable {
                 conn.close();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         }
     }
 
@@ -50,7 +52,7 @@ public class ApartmentDAO implements Serializable {
 
             preStm.executeUpdate();
         } catch (SQLException | ClassNotFoundException throwables) {
-            throwables.printStackTrace();
+            //throwables.printStackTrace();
         } finally {
             closeConnection();
         }
@@ -97,5 +99,118 @@ public class ApartmentDAO implements Serializable {
             closeConnection();
         }
         return (result > 0);
+    }
+
+    public List<Apartment> getAll() {
+        List<Apartment> result = new ArrayList<>();
+        Apartment entity;
+        try {
+            conn = MyConnection.getMyConnection();
+            if (conn != null) {
+                String sql = "Select idApartment, nameApartment, imgUrl, webUrl, price, meanPrice, districtId, room, restRoom, address, area, longitude, latitude from Apartment";
+                preStm = conn.prepareStatement(sql);
+                rs = preStm.executeQuery();
+                while (rs.next()) {
+                    entity = new Apartment();
+                    entity.setId(rs.getInt("idApartment"));
+                    entity.setName(rs.getString("nameApartment"));
+                    entity.setImgUrl(rs.getString("imgUrl"));
+                    entity.setWebUrl(rs.getString("webUrl"));
+                    entity.setPrice(rs.getDouble("price"));
+                    entity.setMeanPrice(rs.getDouble("meanPrice"));
+                    entity.setDistrictId(rs.getInt("districtId"));
+                    entity.setRoom(rs.getInt("room"));
+                    entity.setRestRoom(rs.getInt("restRoom"));
+                    entity.setAddress(rs.getString("address"));
+                    entity.setArea(rs.getInt("area"));
+                    entity.setLongitude(rs.getDouble("longitude"));
+                    entity.setLatitude(rs.getDouble("latitude"));
+
+                    result.add(entity);
+                }
+            }
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeConnection();
+        }
+
+        return result;
+    }
+
+    public Apartment getDetail(int id) {
+        Apartment entity = null;
+        try {
+            conn = MyConnection.getMyConnection();
+            if (conn != null) {
+                String sql = "Select idApartment, nameApartment, imgUrl, webUrl, price, meanPrice, districtId, room, restRoom, address, area, longitude, latitude from Apartment where idApartment = ?";
+                preStm = conn.prepareStatement(sql);
+                preStm.setInt(1, id);
+                rs = preStm.executeQuery();
+                while (rs.next()) {
+                    entity = new Apartment();
+                    entity.setId(rs.getInt("idApartment"));
+                    entity.setName(rs.getString("nameApartment"));
+                    entity.setImgUrl(rs.getString("imgUrl"));
+                    entity.setWebUrl(rs.getString("webUrl"));
+                    entity.setPrice(rs.getDouble("price"));
+                    entity.setMeanPrice(rs.getDouble("meanPrice"));
+                    entity.setDistrictId(rs.getInt("districtId"));
+                    entity.setRoom(rs.getInt("room"));
+                    entity.setRestRoom(rs.getInt("restRoom"));
+                    entity.setAddress(rs.getString("address"));
+                    entity.setArea(rs.getInt("area"));
+                    entity.setLongitude(rs.getDouble("longitude"));
+                    entity.setLatitude(rs.getDouble("latitude"));
+                }
+            }
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeConnection();
+        }
+
+        return entity;
+    }
+
+    public static List<Apartment> getAllinDistrict(int id) {
+        List<Apartment> result = new ArrayList<>();
+        Apartment entity;
+        try {
+            conn = MyConnection.getMyConnection();
+            if (conn != null) {
+                String sql = "Select idApartment, nameApartment, imgUrl, webUrl, price, meanPrice, districtId, room, restRoom, address, area, longitude, latitude from Apartment where districtId = ?";
+                preStm = conn.prepareStatement(sql);
+                preStm.setInt(1, id);
+                rs = preStm.executeQuery();
+                while (rs.next()) {
+                    entity = new Apartment();
+                    entity.setId(rs.getInt("idApartment"));
+                    entity.setName(rs.getString("nameApartment"));
+                    entity.setImgUrl(rs.getString("imgUrl"));
+                    entity.setWebUrl(rs.getString("webUrl"));
+                    entity.setPrice(rs.getDouble("price"));
+                    entity.setMeanPrice(rs.getDouble("meanPrice"));
+                    entity.setDistrictId(rs.getInt("districtId"));
+                    entity.setRoom(rs.getInt("room"));
+                    entity.setRestRoom(rs.getInt("restRoom"));
+                    entity.setAddress(rs.getString("address"));
+                    entity.setArea(rs.getInt("area"));
+                    entity.setLongitude(rs.getDouble("longitude"));
+                    entity.setLatitude(rs.getDouble("latitude"));
+
+                    result.add(entity);
+                }
+            }
+
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        } finally {
+            closeConnection();
+        }
+
+        return result;
     }
 }

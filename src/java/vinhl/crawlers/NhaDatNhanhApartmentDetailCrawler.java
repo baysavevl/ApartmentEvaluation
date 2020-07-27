@@ -153,7 +153,7 @@ public class NhaDatNhanhApartmentDetailCrawler extends BaseCrawler {
             if (isFound) {
                 document = "<div>" + document + "</div>";
             }
-            System.out.println(XMLChecker.refineHtml(document));
+            //System.out.println(XMLChecker.refineHtml(document));
             stAXParserForApartmentDetail(XMLChecker.refineHtml(document), url, idDistrict);
         } catch (UnsupportedEncodingException ex) {
             Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
@@ -313,12 +313,12 @@ public class NhaDatNhanhApartmentDetailCrawler extends BaseCrawler {
         }
 
         meanPrice = price / area;
+        price = (price / Constants.DIV_MILLION);
         location = GeoCoding.getLocation(strAddress);
         latitude = location[0];
         longitude = location[1];
 
         Apartment apartment = new Apartment();
-        //apartment.setId(++Constants.ID_APARTMENT);
         apartment.setName(apartmentName);
         apartment.setImgUrl(imgUrl);
         apartment.setWebUrl(url);
@@ -348,7 +348,7 @@ public class NhaDatNhanhApartmentDetailCrawler extends BaseCrawler {
         System.out.println("Lat = " + latitude);
         System.out.println("Long = " + longitude);
 
-        System.out.println(Constants.ID_APARTMENT);
+        System.out.println(Constants.ID_APARTMENT++);
         System.out.println("--------------");
 
 
@@ -362,147 +362,6 @@ public class NhaDatNhanhApartmentDetailCrawler extends BaseCrawler {
             Logger.getLogger(NhaDatNhanhApartmentDetailCrawler.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
-    /*
-
-    @Override
-    public void run() {
-        BufferedReader reader = null;
-        XMLChecker XMLChecker = new XMLChecker();
-        url = getUrl();
-        try {
-            reader = getBufferedReaderForURL(url);
-            if (Objects.isNull(reader)) {
-                return;
-            }
-            String line = "";
-            String document = "";
-            boolean isEnd = false;
-            boolean isFound = false;
-
-            boolean isFoundName = false;
-            boolean isFoundPrice = false;
-            boolean isFoundPicture = false;
-            boolean isFoundAddress = false;
-            boolean isFoundRoom = false;
-            boolean isFoundRest = false;
-
-            int countRoom = 0;
-            int countRest = 0;
-
-            while ((line = reader.readLine()) != null) {
-                if (isFound && line.contains("div id=\"Description\"")) {
-                    isEnd = true;
-                }
-
-                //Name
-                if (line.contains("row-fluid")) {
-                    isFound = true;
-                    document += line.trim();
-                    isFoundName = true;
-                }
-
-                if (isFoundName && line.contains("</h1>")) {
-                }
-
-                //Price
-                if (isFound && !isFoundPrice && line.contains("span class=\"price\"")) {
-                    isFoundPrice = true;
-                }
-
-                if (isFoundPrice && line.contains("</span>")) {
-                    document += line.trim();
-                    isFoundPrice = false;
-                }
-
-                //Address
-                if (isFound && !isFoundAddress && line.contains("col-sm-9 col-xs-12 padding-top-custom-devive address-advert")) {
-                    isFoundAddress = true;
-                }
-
-                if (isFoundAddress && line.contains("</div>")) {
-                    document += line.trim();
-                    isFoundAddress = false;
-                }
-
-
-                //Picture Link
-                if (isFound && !isFoundPicture && line.contains("tvt_elt_1")) {
-                    document += line.trim();
-                    isFoundPicture = true;
-                }
-
-
-                //Room - Rest
-
-                if (isFound && !isFoundRoom && line.contains("Số phòng ngủ")) {
-                    isFoundRoom = true;
-                }
-
-                if (isFoundRoom && line.contains("</td>")) {
-                    countRoom++;
-                }
-
-                if (countRoom == 2) {
-                    document += line.trim();
-                    isFoundRoom = false;
-                    countRoom = 0;
-                }
-
-                if (isFound && !isFoundRest && line.contains("Số phòng tắm")) {
-                    isFoundRest = true;
-                }
-
-                if (isFoundRest && line.contains("</td>")) {
-                    countRest++;
-                }
-
-                if (countRest == 2) {
-                    document += line.trim();
-                    isFoundRest = false;
-                    countRest = 0;
-                }
-
-                if (isFoundPrice || isFoundRoom || isFoundRest || isFoundAddress) {
-                    document += line.trim();
-                }
-
-                if (isEnd) {
-                    break;
-                }
-            }
-            if (isFound) {
-                document = "<div>" + document + "</div>";
-            }
-            try {
-                synchronized (BaseThread.getInstance()) {
-                    while (BaseThread.isSuspended()) {
-                        BaseThread.getInstance().wait();
-                    }
-                }
-            } catch (InterruptedException ex) {
-                Logger.getLogger(NhaDatNhanhApartmentDetailCrawler.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-            stAXParserForApartmentDetail(XMLChecker.refineHtml(document), url);
-            //return XMLChecker.refineHtml(document);
-        } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
-            Logger.getLogger(DiaOcDistrictCrawler.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (XMLStreamException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (reader != null) {
-                    reader.close();
-                }
-            } catch (IOException ex) {
-                Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-    }*/
 }
 
 

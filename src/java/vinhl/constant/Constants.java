@@ -20,6 +20,9 @@ public class Constants {
     public static Double MILLION = 1000000.0;
     public static Double BILLION = 1000000000.0;
 
+    public static Double DIV_MILLION = 1000000.0;
+
+
 
     public static int MAX_PAGE = 15;
     public static int MAX_ROOM = 6;

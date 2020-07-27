@@ -285,7 +285,8 @@ public class Apartment implements Comparable<Apartment> {
      * Gets the value of the score property.
      */
     public float getScore() {
-        return score;
+        String strFloat = String.format("%.2f", this.score);
+        return Float.parseFloat(strFloat);
     }
 
     /**

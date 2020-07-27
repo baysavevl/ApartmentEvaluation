@@ -20,15 +20,19 @@ public class MainController extends HttpServlet {
 
     private static final String ERROR = "error.jsp";
     private static final String LOGIN = "LoginController";
-    private static final String SEARCH = "SearchController";
     private static final String MANAGE_PRODUCT = "admin_product.jsp";
     private static final String CRAWL_NDN = "CrawlNhaDatNhanhController";
     private static final String CRAWL_NDS = "CrawlNhaDatSoController";
-    private static final String SMART_RECOMMEND = "advice.jsp";
-    private static final String MAIN_USER = "";
-    private static final String MAIN_ADMIN = "";
-    private static final String REPORT = "advice.jsp";
-    private static final String LOCATION_SUGGEST = "advice.jsp";
+    private static final String SMART_RECOMMEND = "GetDistrictController";
+    private static final String RECOMMEND = "RecommendController";
+    private static final String MAIN_USER = "user.jsp";
+    private static final String MAIN_ADMIN = "admin.jsp";
+    private static final String REPORT = "ViewReportController";
+    private static final String DETAIL = "ViewDetailController";
+
+    private static final String LOCATION_CONTROLLER = "suggestLocation.jsp";
+    private static final String LOCATION_SUGGEST = "LocationSuggestController";
+
 
 
     /**
@@ -49,25 +53,25 @@ public class MainController extends HttpServlet {
             String action = request.getParameter("action");
             if (action.equals("Login")) {
                 url = LOGIN;
-            } else if (action.equals("Insert")) {
-                //url = INSERT;
-            } else if (action.equals("Update")) {
-                //url = UPDATE;
-            } else if (action.equals("Click To Suggest")) {
-                url = SEARCH;
-            } else if (action.equals("Manage User")) {
-                url = SEARCH;
+            } else if (action.equals("View Best Location")) {
+                url = LOCATION_CONTROLLER;
             } else if (action.equals("Manage Product")) {
                 url = MANAGE_PRODUCT;
             } else if (action.equals("Crawl Nha Dat Nhanh")) {
                 url = CRAWL_NDN;
             } else if (action.equals("Crawl Nha Dat So")) {
                 url = CRAWL_NDS;
-            } else if (action.equals("Smart Recommend")) {
-                url = SMART_RECOMMEND;
+            } else if (action.equals("Click To Suggest")) {
+                url = RECOMMEND;
             } else if (action.equals("View Report")) {
                 url = REPORT;
-            }
+            } else if (action.equals("Smart Recommend")) {
+                url = SMART_RECOMMEND;
+            } else if (action.equals("View Detail")) {
+                url = DETAIL;
+            } else if (action.equals("Click To Suggest Location")) {               
+                url = LOCATION_SUGGEST;
+            } 
             else {
                 request.setAttribute("ERROR", "Action is not support");
             }

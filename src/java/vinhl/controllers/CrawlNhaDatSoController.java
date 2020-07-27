@@ -37,6 +37,9 @@ public class CrawlNhaDatSoController extends HttpServlet {
         request.setCharacterEncoding("utf-8");
         try {
 
+            System.out.println("Hi");
+
+                        
             String url = WebsiteConstant.District.homePage;
             DistrictCrawler.getDistrict(url);
 
