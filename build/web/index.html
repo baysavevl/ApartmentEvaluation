@@ -6,11 +6,102 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Login</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            *{
+    margin:0;
+    padding:0;
+    border:none;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    overflow: hidden;
+    background-color: #ededed;
+}
+.to {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: minmax(100px,auto);
+}
+ 
+.form {
+    border: 1px solid #80808000;
+    grid-column: 6/9;
+    grid-row: 3;
+    height: 470px;
+    width: 292px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 0px 14px 0px grey;
+    background-color: white;
+}
+h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+i.fab.fa-app-store-ios {
+    display: block;
+    margin-bottom: 50px;
+    font-size: 28px;
+}
+ 
+label {
+    margin-left: -126px;
+    display: block;
+    font-weight: lighter;
+ 
+}
+input{
+    display: block;
+    border-bottom: 2px solid #00BCD4;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    outline-style: none;
+}
+input[type="text"] {
+    padding: 5px;
+    width: 70%;
+}
+input[type="password"] {
+    padding: 5px;
+    width: 70%;
+}
+ 
+input#submit {
+    padding: 7px;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    bottom: 25%;
+    cursor: pointer;
+    background: linear-gradient(to right, #fc00ff, #00dbde);
+}
+input#submit:hover{
+ 
+    background: linear-gradient(to right, #fc466b, #3f5efb); 
+}
+        </style>
     </head>
     <body>
-        <div>TODO write content</div>
+        <form action="MainController" method="POST">
+        <div class="to">
+            <div class="form">
+        <h2>Login</h2>
+        <i class="fab fa-app-store-ios"></i>
+           <label style="margin-left: -150px;">Username</label>
+           <input type="text" name="txtUsername" value="" />
+           <label style="margin-left: -150px;">Password</label> 
+           <input type="password" name="txtPassword" value="" />
+           
+           <input id="submit" type="submit" value="Login" name="action" />
+            </div>
+        </div>
+        </form>
     </body>
 </html>

@@ -9,6 +9,7 @@ import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.Objects;
 import javax.servlet.ServletContext;
 
 public class BaseCrawler {
@@ -28,8 +29,15 @@ public class BaseCrawler {
     protected static BufferedReader getBufferedReaderForURL(String urlString) throws MalformedURLException, UnsupportedEncodingException, IOException {
         URL url = new URL(urlString);
         URLConnection connection = url.openConnection();
+        if (Objects.isNull(connection)) {
+            return null;
+        }
+
         connection.addRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)");
         InputStream is = connection.getInputStream();
+        if (Objects.isNull(is)) {
+            return null;
+        }
         BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
         return reader;
     }

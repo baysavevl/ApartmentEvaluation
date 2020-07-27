@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<section class="col-xs-12 col-sm-12 col-md-12 col-lg-6 pl-2 pr-2 float-left crb_contain_mid contain_news_detail_mid">
+    <h1 class="pt-2 title_detail_n">Bán Căn Hộ Xi Grand Court Giá Tốt 2 Phòng Ngủ Từ 3,9 Tỷ/căn, 3 Phòng Ngủ Từ 5,1 Tỷ.</h1>
+    <div class="col-12 float-left px-0 d-block d-lg-none post-content-tit">
+        <div class="col-12 float-left px-0 d-block d-lg-none post-content-tit">
+            <p>
+                <a href="/ban-can-ho-chung-cu-tai-quan-10-ho-chi-minh/" class="text-blue">Bán căn hộ - chung cư tạiQuận 10</a>
+            </p>
+            <p class="">
+                <i style="width: 14px;" class="fa fa-dollar-sign text-center"></i>Giá:<b class="text-mvl">
+                    <b>5,1</b>tỷ</b>
+            </p>
+            <p class="">
+                <i style="width: 14px;" class="fa fa-map-marker text-center"></i>Địa chỉ: Lý Thường Kiệt, Phường 14, Quận 10, Hồ Chí Minh</p>
+            <p class="">
+                <i style="width: 14px;" class="fa fa-star text-center"></i>Loại tin: Tin thường</p>
+        </div>
+        <div class="card-text text-list pt-1">
+            <div class="card-text text-list pt-1">
+                <span class="pr-2">
+                    <span class="fa fa-home pr-1"></span>Diện tích: 89 m<sup>2</sup>
+                </span>
+                <span class="pr-2">
+                    <span class="fa fa-bed pr-1"></span>3 Phòng</span>
+                <span class="pr-2">
+                    <span class="fa fa-male pr-1"></span>2 Toilet</span>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</section>
+

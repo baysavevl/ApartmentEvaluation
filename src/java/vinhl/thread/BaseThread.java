@@ -18,6 +18,7 @@ public class BaseThread extends Thread {
     }
 
     private static boolean suspended = false;
+
     public static boolean isSuspended() {
         return suspended;
     }

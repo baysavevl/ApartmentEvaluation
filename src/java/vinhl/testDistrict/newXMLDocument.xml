@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<div><tr style="height: 12.75pt;" height="17">
+    <td width="64" style="height: 12.75pt; width: 48pt;" class="xl25" height="17">
+        <strong>STT</strong>
+    </td>
+    <td width="105" style="border-left: medium none; width: 79pt;" class="xl25">
+        <strong>Mã quận/huyện</strong>
+    </td>
+    <td width="160" style="border-left: medium none; width: 120pt;" class="xl25">
+        <strong>Tên quận/huyện</strong>
+    </td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">1</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">760</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 1</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">2</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">761</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 12</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">3</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">762</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận Thủ Đức</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">4</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">763</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 9</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">5</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">764</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận Gò Vấp</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">6</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">765</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận Bình Thạnh</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">7</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">766</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận Tân Bình</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">8</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">767</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận Tân Phú</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">9</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">768</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận Phú Nhuận</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">10</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">769</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 2</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">11</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">770</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 3</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">12</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">771</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 10</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">13</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">772</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 11</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">14</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">773</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 4</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">15</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">774</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 5</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">16</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">775</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 6</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">17</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">776</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 8</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">18</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">777</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận Bình Tân</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">19</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">778</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Quận 7</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">20</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">783</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Huyện Củ Chi</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">21</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">784</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Huyện Hóc Môn</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">22</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">785</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Huyện Bình Chánh</td>
+</tr>
+<tr style="height: 12.75pt;" height="17">
+    <td style="height: 12.75pt; border-top: medium none;" class="xl25" height="17">23</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl25">786</td>
+    <td style="border-top: medium none; border-left: medium none;" class="xl24">Huyện Nhà Bè</td>
+</tr>
+<tr style="height: 12.75pt;" height="17"></tr>
+</div>
+<tr>
+    <td valign="top" id="top-left-1" class="lfr-column fourty_left">
+        <div id="layout-column_top-left-1" class="lfr-portlet-column empty"></div>
+    </td>
+    <td valign="top" id="top-right-1" class="lfr-column fourty_right">
+        <div id="layout-column_top-right-1" class="lfr-portlet-column empty"></div>
+    </td>
+</tr>
+<tr>
+    <td colspan="2" valign="top" id="center-top" class="lfr-column eighty_left">
+        <div id="layout-column_center-banner" class="lfr-portlet-column empty"></div>
+    </td>
+</tr>
+<tr>
+    <td colspan="2" valign="top" id="center-top" class="lfr-column twenty_left">
+        <div id="layout-column_center-content" class="lfr-portlet-column empty"></div>
+    </td>
+</tr>
+<td valign="top" id="column-right" class="lfr-column twenty_right"></td>
+

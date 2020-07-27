@@ -25,5 +25,22 @@ public class WebsiteConstant {
         public static final String classRoom = "fa fa-bed pr-1";
         public static final String classRest = "fa fa-male pr-1";
 
+        public static final String removeDiaChi = "Địa chỉ: ";
+    }
+
+    public static class NhaDatNhanh {
+        public static final String pageSite = "";
+        public static final String mainPage = "https://nhadatnhanh.vn/can-ho-ban-tpho-chi-minh";
+        public static final String prefixPage ="https://nhadatnhanh.vn";
+        public static final String paging = "/page:";
+
+        public static final String tagRoom = "Số phòng ngủ";
+        public static final String tagRest = "Số phòng tắm";
+
+        public static final int minPrice = 300;
+    }
+
+    public static class District {
+        public static final String homePage = "http://pso.hochiminhcity.gov.vn/web/guest/danhmucthongke-danhmucquanhuyen";
     }
 }

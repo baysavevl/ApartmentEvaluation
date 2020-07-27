@@ -3,7 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/utils/UrlValidator.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/schema/apartment.xsd</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/jaxb/Apartment.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/jaxb/District.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/testNDN/TestRun.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/crawlers/DiaOcDistrictCrawler.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/jaxb/package-info.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/crawlers/NhaDatNhanhApartmentDetailCrawler.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/testDistrict/newXMLDocument.xml</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/testNDS/newXMLDocument.xml</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/jaxb/JaxBGenerator.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/testNDN/Stage1.java</file>
         </group>
     </open-files>
 </project-private>

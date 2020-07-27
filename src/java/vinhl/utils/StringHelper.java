@@ -1,5 +1,7 @@
 package vinhl.utils;
 
+import vinhl.constant.Constants;
+
 import java.text.Normalizer;
 import java.util.regex.Pattern;
 
@@ -13,4 +15,6 @@ public class StringHelper {
         str = str.replace("Đ", "D");
         return str;
     }
+
+
 }

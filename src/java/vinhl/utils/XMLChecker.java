@@ -1,11 +1,12 @@
 package vinhl.utils;
 
-import static vinhl.utils.SyntaxState.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static vinhl.utils.SyntaxState.*;
 
 
 public class XMLChecker {

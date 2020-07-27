@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<xsd:schema version="1.0"
+            targetNamespace="http://xml.netbeans.org/schema/product"
+            xmlns="http://xml.netbeans.org/schema/product"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+    <xsd:complexType name="Apartment">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:int"/>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="imgUrl" type="xsd:string"/>
+            <xsd:element name="webUrl" type="xsd:string"/>
+            <xsd:element name="price" type="xsd:double"/>
+            <xsd:element name="meanPrice" type="xsd:double"/>
+            <xsd:element name="districtId" type="xsd:int"/>
+            <xsd:element name="room" type="xsd:int"/>
+            <xsd:element name="restRoom" type="xsd:int"/>
+            <xsd:element name="address" type="xsd:string"/>
+            <xsd:element name="area" type="xsd:int"/>
+            <xsd:element name="score" type="xsd:float"/>            
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="District">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:int"/>
+            <xsd:element name="name" type="xsd:string"/>         
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>
