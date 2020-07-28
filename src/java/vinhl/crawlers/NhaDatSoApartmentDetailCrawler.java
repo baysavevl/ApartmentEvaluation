@@ -127,22 +127,22 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
                     }
                 }
             } catch (InterruptedException ex) {
-                Logger.getLogger(NhaDatSoApartmentDetailCrawler.class.getName()).log(Level.SEVERE, null, ex);
+                //Logger.getLogger(NhaDatSoApartmentDetailCrawler.class.getName()).log(Level.SEVERE, null, ex);
             }
             stAXParserForApartmentDetail(XMLChecker.refineHtml(document), websiteUrl, imgUrl, idDistrict);
         } catch (UnsupportedEncodingException ex) {
-            Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-            Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
         } catch (XMLStreamException e) {
-            e.printStackTrace();
+            //e.printStackTrace();
         } finally {
             try {
                 if (reader != null) {
                     reader.close();
                 }
             } catch (IOException ex) {
-                Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
+                //Logger.getLogger(BaseCrawler.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
@@ -204,10 +204,8 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
                                         stop = eventReader.next().toString().equalsIgnoreCase("<b>");
                                     }
                                     moneyPrefix = eventReader.next().toString();
-                                    //System.out.println("money prefix = " + moneyPrefix);
                                     eventReader.next();
                                     moneySuffix = eventReader.next().toString();
-                                    //System.out.println("money suffix = " + moneySuffix);
 
                                     if (moneySuffix.contains(Constants.MONEY_BILLION)) {
                                         moneySuffix = Constants.MONEY_BILLION;
@@ -327,7 +325,7 @@ public class NhaDatSoApartmentDetailCrawler extends BaseCrawler {
                 }
             }
         } catch (InterruptedException ex) {
-            Logger.getLogger(NhaDatSoApartmentDetailCrawler.class.getName()).log(Level.SEVERE, null, ex);
+            //Logger.getLogger(NhaDatSoApartmentDetailCrawler.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }

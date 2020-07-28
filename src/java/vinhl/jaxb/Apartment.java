@@ -1,4 +1,3 @@
-
 package vinhl.jaxb;
 
 import javax.xml.bind.annotation.XmlAccessType;
@@ -6,11 +5,13 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-
 /**
- * <p>Java class for Apartment complex type.
+ * <p>
+ * Java class for Apartment complex type.
  *
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>
+ * The following schema fragment specifies the expected content contained within
+ * this class.
  *
  * <pre>
  * &lt;complexType name="Apartment">
@@ -39,20 +40,20 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "Apartment", propOrder = {
-        "id",
-        "name",
-        "imgUrl",
-        "webUrl",
-        "price",
-        "meanPrice",
-        "districtId",
-        "room",
-        "restRoom",
-        "address",
-        "area",
-        "longitude",
-        "latitude",
-        "score"
+    "id",
+    "name",
+    "imgUrl",
+    "webUrl",
+    "price",
+    "meanPrice",
+    "districtId",
+    "room",
+    "restRoom",
+    "address",
+    "area",
+    "longitude",
+    "latitude",
+    "score"
 })
 public class Apartment implements Comparable<Apartment> {
 
@@ -92,8 +93,7 @@ public class Apartment implements Comparable<Apartment> {
     /**
      * Gets the value of the name property.
      *
-     * @return possible object is
-     * {@link String }
+     * @return possible object is {@link String }
      */
     public String getName() {
         return name;
@@ -102,8 +102,7 @@ public class Apartment implements Comparable<Apartment> {
     /**
      * Sets the value of the name property.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value allowed object is {@link String }
      */
     public void setName(String value) {
         this.name = value;
@@ -112,8 +111,7 @@ public class Apartment implements Comparable<Apartment> {
     /**
      * Gets the value of the imgUrl property.
      *
-     * @return possible object is
-     * {@link String }
+     * @return possible object is {@link String }
      */
     public String getImgUrl() {
         return imgUrl;
@@ -122,8 +120,7 @@ public class Apartment implements Comparable<Apartment> {
     /**
      * Sets the value of the imgUrl property.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value allowed object is {@link String }
      */
     public void setImgUrl(String value) {
         this.imgUrl = value;
@@ -132,8 +129,7 @@ public class Apartment implements Comparable<Apartment> {
     /**
      * Gets the value of the webUrl property.
      *
-     * @return possible object is
-     * {@link String }
+     * @return possible object is {@link String }
      */
     public String getWebUrl() {
         return webUrl;
@@ -142,8 +138,7 @@ public class Apartment implements Comparable<Apartment> {
     /**
      * Sets the value of the webUrl property.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value allowed object is {@link String }
      */
     public void setWebUrl(String value) {
         this.webUrl = value;
@@ -167,7 +162,8 @@ public class Apartment implements Comparable<Apartment> {
      * Gets the value of the meanPrice property.
      */
     public double getMeanPrice() {
-        return meanPrice;
+        String strFloat = String.format("%.1f", this.meanPrice);
+        return Double.parseDouble(strFloat);
     }
 
     /**
@@ -222,8 +218,7 @@ public class Apartment implements Comparable<Apartment> {
     /**
      * Gets the value of the address property.
      *
-     * @return possible object is
-     * {@link String }
+     * @return possible object is {@link String }
      */
     public String getAddress() {
         return address;
@@ -232,8 +227,7 @@ public class Apartment implements Comparable<Apartment> {
     /**
      * Sets the value of the address property.
      *
-     * @param value allowed object is
-     *              {@link String }
+     * @param value allowed object is {@link String }
      */
     public void setAddress(String value) {
         this.address = value;
@@ -299,8 +293,12 @@ public class Apartment implements Comparable<Apartment> {
     @Override
     public int compareTo(Apartment apartment) {
         int isEqual = 0;
-        if (this.getScore() > apartment.getScore()) isEqual = -1;
-        if (this.getScore() < apartment.getScore()) isEqual = 1;
+        if (this.getScore() > apartment.getScore()) {
+            isEqual = -1;
+        }
+        if (this.getScore() < apartment.getScore()) {
+            isEqual = 1;
+        }
         return isEqual;
     }
 }

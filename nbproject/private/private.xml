@@ -3,17 +3,25 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/schema/apartment.xsd</file>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/jaxb/Apartment.java</file>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/jaxb/District.java</file>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/testNDN/TestRun.java</file>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/crawlers/DiaOcDistrictCrawler.java</file>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/jaxb/package-info.java</file>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/crawlers/NhaDatNhanhApartmentDetailCrawler.java</file>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/testDistrict/newXMLDocument.xml</file>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/testNDS/newXMLDocument.xml</file>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/jaxb/JaxBGenerator.java</file>
-            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/testNDN/Stage1.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/controllers/RecommendController.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/testDistrict/TestLocation.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/controllers/LoginController.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/testDistrict/TestSuggestion.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/dao/DistrictDAO.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/web/admin.jsp</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/dto/AnalyticDistrict.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/entities/ApartmentManager.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/controllers/ViewReportController.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/web/index.html</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/web/report.jsp</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/controllers/MainController.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/web/smartRecommend.jsp</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/controllers/LocationSuggestController.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/controllers/GetDistrictController.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/web/suggestLocation.jsp</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/dao/ApartmentDAO.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/utils/DistanceUtil.java</file>
+            <file>file:/Users/Vinh%20Luu/Vinh/IT_file/Program/XML/FinalProject/ApartmentEvaluation/src/java/vinhl/controllers/ViewDetailController.java</file>
         </group>
     </open-files>
 </project-private>

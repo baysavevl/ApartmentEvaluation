@@ -39,27 +39,24 @@
         </style>
     </head>
     <body>
-        
+
 
 
         <c:if test="${requestScope.ANA_DIS != null}">
             <c:if test="${not empty requestScope.ANA_DIS}">
-                <table border = "1">
-                    <thead>
-                
-                <tr>
-                                    <th>Name</th>
-                                    <th>Average Price</th>
-                                    <th>Average Price/m2</th>
-                                    <th>Average Area</th>
-                                    <th>Range 95%</th>
-                </tr>
-            </thead>
-                </table>
-            
+
                 <ul class="products">
-                    <c:forEach items="${requestScope.ANA_DIS}" var="dto">
-                        <table border="1">                        
+                    <table border="1"> 
+                        <thead>
+                            <th>Name</th>
+                            <th>Average Price</th>
+                            <th>Average Price/m2 (VND) </th>
+                            <th>Average Area</th>
+                            <th>Range 95 (Mil) %</th>
+                        </thead>
+
+                        <c:forEach items="${requestScope.ANA_DIS}" var="dto">
+
                             <tbody>
                                 <tr>
                                     <td> ${dto.name}</td>
@@ -69,8 +66,9 @@
                                     <td> ${dto.rangePriL} - ${dto.rangePriU}  </td>
                                 </tr>
                             </tbody>
-                        </table>                     
-                    </c:forEach>
+
+                        </c:forEach>
+                    </table>  
                 </ul>
             </c:if>
         </c:if>

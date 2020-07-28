@@ -1,6 +1,7 @@
 package vinhl.dto;
 
 public class AnalyticDistrict {
+
     public String name;
     public int id;
     public int count;
@@ -19,7 +20,6 @@ public class AnalyticDistrict {
     public int maxRest;
     public double rangePriL;
     public double rangePriU;
-
 
     public AnalyticDistrict() {
     }
@@ -68,7 +68,8 @@ public class AnalyticDistrict {
     }
 
     public double getAvgePrice() {
-        return avgePrice;
+        String strFloat = String.format("%.1f", this.avgePrice);
+        return Double.parseDouble(strFloat);
     }
 
     public void setAvgePrice(double avgePrice) {
@@ -84,7 +85,8 @@ public class AnalyticDistrict {
     }
 
     public double getAvgMean() {
-        return avgMean;
+        String strFloat = String.format("%.1f", this.avgMean);
+        return Double.parseDouble(strFloat);
     }
 
     public void setAvgMean(double avgMean) {
@@ -100,7 +102,8 @@ public class AnalyticDistrict {
     }
 
     public double getAvgArea() {
-        return avgArea;
+        String strFloat = String.format("%.1f", this.avgArea);
+        return Double.parseDouble(strFloat);
     }
 
     public void setAvgArea(double avgArea) {
@@ -172,7 +175,8 @@ public class AnalyticDistrict {
     }
 
     public double getRangePriL() {
-        return rangePriL;
+        String strFloat = String.format("%.1f", this.rangePriL);
+        return Double.parseDouble(strFloat);
     }
 
     public void setRangePriL(double rangePriL) {
@@ -180,7 +184,8 @@ public class AnalyticDistrict {
     }
 
     public double getRangePriU() {
-        return rangePriU;
+        String strFloat = String.format("%.1f", this.rangePriU);
+        return Double.parseDouble(strFloat);
     }
 
     public void setRangePriU(double rangePriU) {

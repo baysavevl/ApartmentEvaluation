@@ -78,11 +78,11 @@
                     <tbody>
                         <tr>
                             <td>Min Area :</td>
-                            <td><input type="number" name="txtAreaMin" min="1"></td>
+                            <td><input type="number" name="txtAreaMin" min="1" required=""></td>
                         </tr>
                         <tr>
                             <td>Weight: </td>
-                            <td><input type="number" name="txtAreaWeight" value="0"></td>
+                            <td><input type="number" name="txtAreaWeight" value="0" required=""></td>
                         </tr>
                     </tbody>
                 </table>
@@ -94,11 +94,11 @@
                     <tbody>
                         <tr>
                             <td>Min Room :</td>
-                            <td><input type="number" name="txtRoomMin" min="0"></td>
+                            <td><input type="number" name="txtRoomMin" min="0" required=""></td>
                         </tr>
                         <tr>
                             <td>Weight: </td>
-                            <td><input type="number" name="txtRoomWeight" value="0"></td>
+                            <td><input type="number" name="txtRoomWeight" value="0" required=""></td>
                         </tr>
                     </tbody>
                 </table>
@@ -110,13 +110,13 @@
                     <tbody>
                         <tr>
                             <td>Min Rest Room :</td>
-                            <td><input type="number" name="txtRestMin" min="1"></td>
+                            <td><input type="number" name="txtRestMin" min="1" required=""></td>
                                 <%--                            <td>Max Rest Room :</td>--%>
                                 <%--                            <td><input type="number" name="txtRestMax" min="2"></td>--%>
                         </tr>
                         <tr>
                             <td>Weight: </td>
-                            <td><input type="number" name="txtRestWeight" value="0"></td>
+                            <td><input type="number" name="txtRestWeight" value="0" required=""></td>
                         </tr>
                     </tbody>
                 </table>
@@ -138,7 +138,7 @@
                                 <span>
                                     ${dto.name}
                                 </span>
-                                <input type="hidden" name="uname" value=" ">
+                                <input type="hidden" name="txtId" value="${dto.id}">
                                 <br/>
                                 <strong style="color: red;" >                             
                                     ${dto.score} %                              

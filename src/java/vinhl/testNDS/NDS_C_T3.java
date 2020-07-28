@@ -9,7 +9,7 @@ public class NDS_C_T3 extends BaseCrawler {
         String url = "https://nhadatso.com/nha-dat-ban-can-ho-chung-cu-tai-quan-9-ho-chi-minh/?p=3";
 
         NhaDatSoApartmentListCrawler crawler = new NhaDatSoApartmentListCrawler(url, 12);
-        crawler.run();
+        //crawler.run();
 
         //String res = crawler.getListApartment(url);
         //System.out.println(res);

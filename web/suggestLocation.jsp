@@ -98,7 +98,7 @@
                                 <span>
                                     ${dto.name}
                                 </span>
-                                <input type="hidden" name="uname" value=" ">
+                                <input type="hidden" name="txtId" value="${dto.id}">
                                 <br/>
                                 <strong style="color: red;" >                             
                                     Total: ${dto.score} Kms                           

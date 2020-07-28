@@ -48,8 +48,13 @@ public class ApartmentManager {
 
         float totalWeight = 0;
 
+        System.out.println("max Price = " + filter.getMaxprice());
+        System.out.println("score = " + scoringField(500, filter.getMaxprice(), 2));
+        System.out.println("min Area = "+ filter.getMinArea());
+        
         for (Apartment entity : fullList) {
             score = 0;
+            totalWeight = 0;
             if (!Objects.isNull(filter)) {
                 if (filter.getWeightPrice() > 0) {
                     score += scoringField(entity.getPrice(), filter.getMaxprice(), 2) * filter.getWeightPrice();

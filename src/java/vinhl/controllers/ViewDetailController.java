@@ -18,7 +18,7 @@ import java.io.IOException;
 /**
  * @author Vinh
  */
-@WebServlet(name = "ViewDetailServerlet", urlPatterns = {"/ViewDetailServerlet"})
+@WebServlet(name = "ViewDetailController", urlPatterns = {"/ViewDetailController"})
 public class ViewDetailController extends HttpServlet {
 
     /**
@@ -35,9 +35,11 @@ public class ViewDetailController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try {
             int id = Integer.parseInt(request.getParameter("txtId"));
+            System.out.println("id = " + id);
             ApartmentDAO dao = new ApartmentDAO();
             Apartment detail = dao.getDetail(id);
 
+            System.out.println(detail.getImgUrl());
             request.setAttribute("DETAIL", detail);
         } catch (Exception e) {
             log(e.getMessage());

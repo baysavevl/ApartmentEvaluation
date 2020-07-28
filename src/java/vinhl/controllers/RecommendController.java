@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
+import java.util.Objects;
 import vinhl.dao.DistrictDAO;
 
 /**
@@ -28,10 +29,10 @@ public class RecommendController extends HttpServlet {
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
      *
-     * @param request  servlet request
+     * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
+     * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -44,27 +45,45 @@ public class RecommendController extends HttpServlet {
             int minRest = 0;
             int wP = 0, wA = 0, wR = 0, wRe = 0;
             String district = request.getParameter("txtDistrict");
-            try {
+            if (!Objects.isNull(request.getParameter("txtPriceMax"))) {
                 maxPrice = Float.valueOf(request.getParameter("txtPriceMax"));
-                minArea = Integer.parseInt(request.getParameter("txtAreaMin"));
-                minRoom = Integer.parseInt(request.getParameter("txtRoomMin"));
-                minRest = Integer.parseInt(request.getParameter("txtRestMin"));
-                wP = Integer.parseInt(request.getParameter("txtPriceWeight"));
-                wA = Integer.parseInt(request.getParameter("txtAreaWeight"));
-                wR = Integer.parseInt(request.getParameter("txtRoomWeight"));
-                wRe = Integer.parseInt(request.getParameter("txtRestWeight"));
-                
-            } catch (Exception e) {
-                e.printStackTrace();
+
             }
+
+            
+            if (!Objects.isNull(request.getParameter("txtAreaMin"))) {
+                minArea = Integer.parseInt(request.getParameter("txtAreaMin"));
+
+            }
+
+            if (!Objects.isNull(request.getParameter("txtRoomMin"))) {
+                minRoom = Integer.parseInt(request.getParameter("txtRoomMin"));
+
+            }
+
+            if (!Objects.isNull(request.getParameter("txtRestMin"))) {
+                minRest = Integer.parseInt(request.getParameter("txtRestMin"));
+            }
+            
+            if (!Objects.isNull(request.getParameter("txtPriceWeight"))) {
+                wP = Integer.parseInt(request.getParameter("txtPriceWeight"));
+            }
+            if (!Objects.isNull(request.getParameter("txtAreaWeight"))) {
+                wA = Integer.parseInt(request.getParameter("txtAreaWeight"));
+            }
+            if (!Objects.isNull(request.getParameter("txtRoomWeight"))) {
+                wR = Integer.parseInt(request.getParameter("txtRoomWeight"));
+            }
+            if (!Objects.isNull(request.getParameter("txtRestWeight"))) {
+                wRe = Integer.parseInt(request.getParameter("txtRestWeight"));
+            }
+
 
             int id = DistrictDAO.getDistrictId(district);
             System.out.println("maxPrice" + maxPrice);
             System.out.println("minArea" + minArea);
             System.out.println("min Rest R" + minRest);
             System.out.println("weight" + wP);
-            
-            
 
             ApartmentFilter filter = new ApartmentFilter();
             filter.setMaxprice(maxPrice);
@@ -76,7 +95,6 @@ public class RecommendController extends HttpServlet {
             filter.setWeightArea(wA);
             filter.setWeighRest(wRe);
             filter.setId(id);
-                          
 
             ApartmentManager am = new ApartmentManager();
 
@@ -85,20 +103,19 @@ public class RecommendController extends HttpServlet {
             request.setAttribute("RECOM_APA", result);
         } catch (Exception e) {
             log(e.getMessage());
-        }finally{
+        } finally {
             request.getRequestDispatcher("GetDistrictController").forward(request, response);
         }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-
     /**
      * Handles the HTTP <code>GET</code> method.
      *
-     * @param request  servlet request
+     * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
+     * @throws IOException if an I/O error occurs
      */
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -109,10 +126,10 @@ public class RecommendController extends HttpServlet {
     /**
      * Handles the HTTP <code>POST</code> method.
      *
-     * @param request  servlet request
+     * @param request servlet request
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException      if an I/O error occurs
+     * @throws IOException if an I/O error occurs
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

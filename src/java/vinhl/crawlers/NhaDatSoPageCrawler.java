@@ -161,7 +161,9 @@ public class NhaDatSoPageCrawler extends BaseCrawler implements Runnable {
                     currentUrl = url + WebsiteConstant.NhaDatSo.paging + i;
                 } else currentUrl = url;
 
-                crawlingList = new Thread(new NhaDatSoApartmentListCrawler(currentUrl, disId));
+                NhaDatSoApartmentListCrawler listCrawler = new NhaDatSoApartmentListCrawler(currentUrl, disId);
+                listCrawler.getListApartment();
+                //crawlingList = new Thread(new NhaDatSoApartmentListCrawler(currentUrl, disId));
                 try {
                     synchronized (BaseThread.getInstance()) {
                         while (BaseThread.isSuspended()) {
@@ -171,7 +173,7 @@ public class NhaDatSoPageCrawler extends BaseCrawler implements Runnable {
                 } catch (InterruptedException ex) {
                     Logger.getLogger(NhaDatSoApartmentListCrawler.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                crawlingList.start();
+                //crawlingList.start();
             }
 
         } catch (UnsupportedEncodingException ex) {
